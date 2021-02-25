@@ -1,3 +1,6 @@
 from django.shortcuts import render
 
-# Create your views here.
+from .models import Applikacio
+
+def toc(request):
+    return render(request, 'toc/toc.html', {'apps':Applikacio.objects.all()})
